@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luangpra · Cuisine lao &amp; thaï · Rue Saint-Maur, Paris 11ᵉ</title>
+<meta name="description" content="Luangpra, restaurant lao et thaï du 120 rue Saint-Maur, Paris 11ᵉ. Laab à la citronnelle, pad thaï, currys, riz gluant — tout est cuisiné maison. Midi et soir, dimanche soir uniquement." />
+<meta name="theme-color" content="#24443A" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2324443A'/%3E%3Ctext x='16' y='22' font-size='14' font-family='Georgia,serif' fill='%23D4A348' text-anchor='middle'%3ELP%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="restaurant.restaurant" />
+<meta property="og:title" content="Luangpra · Cuisine lao &amp; thaï · Paris 11ᵉ" />
+<meta property="og:description" content="Le laab dans tous ses états, le pad thaï qui cale, le riz gluant dans son panier — la maison lao de la rue Saint-Maur." />
+<meta property="og:image" content="assets/curry.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="assets/curry.jpg" fetchpriority="high" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Albert+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Noto+Sans+Lao:wght@400;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Luangpra","description":"Restaurant lao et thaï : laab à la citronnelle, pad thaï, currys, riz gluant. 120 rue Saint-Maur, Paris 11ᵉ.","image":"assets/curry.jpg","servesCuisine":["Laotian","Thai"],"priceRange":"€€","telephone":"+33143388620","address":{"@type":"PostalAddress","streetAddress":"120 Rue Saint-Maur","addressLocality":"Paris","postalCode":"75011","addressCountry":"FR"},"acceptsReservations":true,"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"315"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"12:00","closes":"14:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:00","closes":"23:30"}]}</script>
+<style>
+:root{
+  --mousson:#24443A; --mousson-2:#2D5347; --mousson-d:#1A332B;
+  --coco:#F4EFE4; --coco-2:#EAE2D1;
+  --or:#D4A348; --or-p:#E7C887;
+  --piment:#C44536; --teck:#7A5234;
+  --gris:#6E7A6E;
+  --line:rgba(36,68,58,.16); --line-i:rgba(244,239,228,.16);
+  --maxw:1260px; --gut:clamp(20px,5vw,44px);
+  --ease:cubic-bezier(.27,.85,.3,1);
+  --ff-d:"DM Serif Display",Georgia,serif; --ff-l:"Noto Sans Lao",sans-serif; --ff-b:"Albert Sans",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--coco);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--ff-b);color:var(--mousson-d);background:var(--coco);
+  font-size:17px;line-height:1.64;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{margin:0;font-weight:400}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--mousson);color:var(--coco)}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+/* preloader */
+#pre{position:fixed;inset:0;z-index:9999;background:var(--mousson);display:grid;place-items:center;
+  transition:opacity .6s var(--ease),visibility .6s}
+#pre.done{opacity:0;visibility:hidden;pointer-events:none}
+#pre .c{text-align:center}
+#pre .lao{font-family:var(--ff-l);color:var(--or);font-size:1.2rem;letter-spacing:.2em;display:block;margin-bottom:8px;opacity:0;animation:fa .8s .15s forwards}
+#pre .n{font-family:var(--ff-d);color:var(--coco);font-size:clamp(2rem,7vw,3.6rem);opacity:0;animation:fa .8s .4s forwards}
+@keyframes fa{to{opacity:1}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;
+  padding:18px var(--gut);transition:.3s var(--ease)}
+.nav.sc{background:rgba(244,239,228,.94);backdrop-filter:blur(12px);padding:12px var(--gut);box-shadow:0 1px 0 var(--line)}
+.nav .brand{font-family:var(--ff-d);font-size:1.3rem;color:var(--mousson)}
+.nav .brand small{display:block;font-family:var(--ff-b);font-weight:700;font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--teck)}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0;align-items:center}
+.nav-links a{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:4px 0;border-bottom:2px solid transparent;transition:.25s}
+.nav-links a:hover{border-color:var(--or)}
+.nav .tel{background:var(--mousson);color:var(--coco);padding:11px 22px;font-weight:700;font-size:.8rem;transition:.25s var(--ease)}
+.nav .tel:hover{background:var(--piment)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;width:42px;height:42px;align-items:flex-end;justify-content:center}
+.burger span{width:25px;height:2px;background:var(--mousson-d);transition:.3s var(--ease)}
+.burger span:nth-child(2){width:16px}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{position:fixed;inset:0;z-index:190;background:var(--coco);display:flex;flex-direction:column;justify-content:center;
+  padding:0 var(--gut);opacity:0;pointer-events:none;transition:.35s var(--ease)}
+.mm.open{opacity:1;pointer-events:auto}
+.mm a{font-family:var(--ff-d);font-size:clamp(2rem,8vw,3rem);padding:13px 0;border-bottom:1px solid var(--line);color:var(--mousson)}
+.mm a:hover{color:var(--piment)}
+@media(max-width:920px){.nav-links{display:none}.burger{display:flex}.nav .tel{display:none}}
+
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:clamp(26px,4vw,60px);
+  max-width:var(--maxw);margin:0 auto;padding:116px var(--gut) 60px;position:relative}
+.hero .lao-bg{position:absolute;top:90px;right:0;font-family:var(--ff-l);font-size:clamp(4rem,12vw,9rem);color:var(--or);
+  opacity:.1;line-height:1;pointer-events:none;user-select:none}
+.hero-txt .sur{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.76rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--teck);margin-bottom:18px}
+.hero-txt .sur::before{content:"";width:26px;height:2px;background:var(--or)}
+.hero-txt h1{font-family:var(--ff-d);font-size:clamp(2.8rem,7.4vw,5.6rem);line-height:1.02;color:var(--mousson)}
+.hero-txt h1 em{font-style:italic;color:var(--piment)}
+.hero-txt .pitch{color:var(--gris);max-width:46ch;margin:22px 0 32px;font-size:1.05rem}
+.hero-txt .pitch b{color:var(--mousson-d)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:16px 30px;background:var(--mousson);color:var(--coco);transition:.22s var(--ease)}
+.btn:hover{background:var(--piment);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--mousson);box-shadow:inset 0 0 0 2px var(--mousson)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--piment);color:var(--piment);background:transparent}
+.hero-img{position:relative}
+.hero-img .grande{overflow:hidden;border-radius:200px 200px 18px 18px;border:2px solid var(--mousson)}
+.hero-img .grande img{width:100%;aspect-ratio:4/4.5;object-fit:cover}
+.hero-img .petite{position:absolute;bottom:-26px;left:-26px;width:42%;border-radius:14px;overflow:hidden;
+  border:6px solid var(--coco);box-shadow:0 16px 40px rgba(26,51,43,.3)}
+.hero-img .petite img{width:100%;aspect-ratio:1;object-fit:cover}
+@media(max-width:880px){.hero{grid-template-columns:1fr;padding-top:98px;min-height:auto}.hero-img{order:-1}
+  .hero-img .grande img{aspect-ratio:4/3.2}.hero-img .petite{bottom:-18px}}
+
+/* intro maison */
+.sec{padding:clamp(70px,10vw,125px) 0}
+.shead{margin-bottom:clamp(30px,5vw,52px)}
+.shead .lao{font-family:var(--ff-l);color:var(--or);font-size:1rem;letter-spacing:.16em;display:block;margin-bottom:8px}
+.shead h2{font-family:var(--ff-d);font-size:clamp(2rem,5vw,3.2rem);color:var(--mousson);line-height:1.05}
+.maison{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,60px);align-items:center}
+.mtxt .gros{font-family:var(--ff-d);font-size:clamp(1.3rem,2.8vw,1.7rem);line-height:1.4;color:var(--mousson-d);margin-bottom:16px}
+.mtxt .gros em{color:var(--piment)}
+.mtxt p{color:var(--gris);max-width:54ch}
+.rituel{display:flex;gap:0;margin-top:28px;border:2px solid var(--mousson)}
+.rituel div{flex:1;padding:18px 14px;text-align:center;border-right:2px solid var(--mousson)}
+.rituel div:last-child{border-right:0}
+.rituel b{font-family:var(--ff-d);display:block;font-size:1.05rem;color:var(--mousson);font-weight:400}
+.rituel span{font-size:.8rem;color:var(--gris)}
+.maison .ph{border-radius:18px;overflow:hidden;border:2px solid var(--mousson);box-shadow:14px 14px 0 var(--or-p)}
+.maison .ph img{width:100%;aspect-ratio:4/3.6;object-fit:cover}
+@media(max-width:880px){.maison{grid-template-columns:1fr}.rituel{flex-direction:column}.rituel div{border-right:0;border-bottom:2px solid var(--mousson)}.rituel div:last-child{border-bottom:0}}
+
+/* bar à laab */
+.laabbar{background:var(--mousson);color:var(--coco)}
+.laabbar .shead .lao{color:var(--or-p)}
+.laabbar .shead h2{color:var(--coco)}
+.laabbar .shead p{color:rgba(244,239,228,.7);margin:12px 0 0;max-width:60ch}
+.laabs{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.8vw,20px)}
+.laab{border:1px solid var(--line-i);padding:clamp(18px,2.6vw,26px);position:relative;transition:.3s var(--ease);background:transparent}
+.laab:hover{background:var(--mousson-2);transform:translateY(-4px)}
+.laab .p{position:absolute;top:14px;right:16px;font-family:var(--ff-d);color:var(--or-p);font-size:1.15rem}
+.laab h3{font-family:var(--ff-d);font-size:1.15rem;margin-bottom:6px;color:#fff;padding-right:44px}
+.laab p{margin:0;font-size:.86rem;color:rgba(244,239,228,.66)}
+.laab-note{margin-top:26px;font-size:.92rem;color:rgba(244,239,228,.7);font-style:italic;text-align:center}
+.laab-note b{color:var(--or-p)}
+@media(max-width:960px){.laabs{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.laabs{grid-template-columns:1fr}}
+
+/* classiques */
+.classiques .cgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2vw,24px);align-items:start}
+.cl{position:relative;border-radius:16px;overflow:hidden;border:2px solid var(--mousson)}
+.cl img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.cl:hover img{transform:scale(1.05)}
+.cl figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 16px 14px;
+  background:linear-gradient(180deg,transparent,rgba(26,51,43,.9))}
+.cl figcaption b{font-family:var(--ff-d);font-weight:400;font-size:1.08rem;color:var(--coco);display:block}
+.cl figcaption span{font-size:.8rem;color:var(--or-p)}
+.cl1{grid-column:span 5;aspect-ratio:4/4.4}
+.cl2{grid-column:span 7;aspect-ratio:16/10.3}
+.cl3{grid-column:span 4;aspect-ratio:4/4.1}
+.cl4{grid-column:span 4;aspect-ratio:4/4.1}
+.cl5{grid-column:span 4;aspect-ratio:4/4.1}
+@media(max-width:820px){.cl1,.cl2{grid-column:1/-1;aspect-ratio:4/3}.cl3,.cl4,.cl5{grid-column:span 4}}
+@media(max-width:560px){.cl3,.cl4,.cl5{grid-column:1/-1;aspect-ratio:4/3}}
+
+/* infos */
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:start}
+.ihor{border:2px solid var(--mousson);background:#fff}
+.ihor .hr{display:flex;justify-content:space-between;gap:12px;padding:14px 22px;border-bottom:1px solid var(--line);font-size:.96rem}
+.ihor .hr:last-child{border-bottom:0}
+.ihor .hr b{font-weight:700}
+.ihor .hr .h{font-weight:600}
+.ihor .hr.dim{background:rgba(212,163,72,.12)}
+.ihor .hr.dim .h{color:var(--teck)}
+.icoords{margin-top:22px;display:grid;gap:9px}
+.icoords a{font-weight:700;border-bottom:2px solid var(--or)}
+.imap{border:2px solid var(--mousson);min-height:380px;height:100%;box-shadow:10px 10px 0 var(--or-p)}
+.imap iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(1) sepia(.1) contrast(1.02)}
+@media(max-width:880px){.infos-grid{grid-template-columns:1fr}.imap{min-height:300px}}
+
+/* fin */
+.fin{background:var(--piment);color:#fff;text-align:center;padding:clamp(58px,8vw,100px) var(--gut)}
+.fin .lao{font-family:var(--ff-l);color:rgba(255,255,255,.65);display:block;margin-bottom:8px;font-size:1.05rem;letter-spacing:.18em}
+.fin h2{font-family:var(--ff-d);font-size:clamp(2rem,5.8vw,3.6rem);line-height:1.05}
+.fin p{color:rgba(255,255,255,.85);max-width:48ch;margin:14px auto 28px}
+.fin .btn{background:#fff;color:var(--piment)}
+.fin .btn:hover{background:var(--mousson-d);color:var(--coco)}
+
+/* footer */
+footer{background:var(--mousson-d);color:rgba(244,239,228,.7);padding:34px 0;font-size:.9rem}
+footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .fb{font-family:var(--ff-d);color:var(--coco);font-size:1.1rem}
+footer .fb span{font-family:var(--ff-l);color:var(--or);font-size:.85em;margin-left:8px}
+footer a:hover{color:var(--coco)}
+
+/* reveals */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cl img,.laab{transition:none}}
+</style>
+</head>
+<body>
+<div id="pre" aria-hidden="true"><div class="c"><span class="lao">ຫຼວງພະບາງ</span><span class="n">Luangpra</span></div></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top">Luangpra<small>Cuisine lao &amp; thaï</small></a>
+  <nav aria-label="Navigation principale">
+    <ul class="nav-links">
+      <li><a href="#maison">La maison</a></li>
+      <li><a href="#laab">Le bar à laab</a></li>
+      <li><a href="#classiques">Les classiques</a></li>
+      <li><a href="#infos">Infos</a></li>
+    </ul>
+  </nav>
+  <a class="tel" href="tel:+33143388620">01 43 38 86 20</a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<div class="mm" id="mm">
+  <a href="#maison">La maison</a>
+  <a href="#laab">Le bar à laab</a>
+  <a href="#classiques">Les classiques</a>
+  <a href="#infos">Infos</a>
+  <a href="tel:+33143388620">01 43 38 86 20</a>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <span class="lao-bg" aria-hidden="true">ລາວ</span>
+    <div class="hero-txt">
+      <span class="sur rv">120 rue Saint-Maur · Paris 11ᵉ</span>
+      <h1 class="rv d1">Le Laos<br />à table, <em>sans</em><br /><em>l'avion.</em></h1>
+      <p class="pitch rv d2"><b>Luangpra</b> — comme Luang Prabang — cuisine le laab à la citronnelle,
+      le riz gluant servi dans son panier et les currys qui réveillent, aux côtés des classiques thaïs.
+      <b>Tout est fait maison</b>, et ça se goûte.</p>
+      <div class="hero-cta rv d3">
+        <a class="btn" href="tel:+33143388620">Réserver une table</a>
+        <a class="btn ghost" href="#laab">Découvrir le laab</a>
+      </div>
+    </div>
+    <div class="hero-img rv d1">
+      <div class="grande"><img src="assets/curry.jpg" alt="Soupe-repas au curry rouge et au poulet, servie en cocotte noire" fetchpriority="high" /></div>
+      <div class="petite"><img src="assets/riz.jpg" alt="Le riz gluant servi dans son panier tressé traditionnel" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="sec" id="maison">
+    <div class="wrap">
+      <div class="shead rv"><span class="lao" aria-hidden="true">ເຮືອນລາວ</span><h2>Une maison lao, pour de vrai</h2></div>
+      <div class="maison">
+        <div class="mtxt">
+          <p class="gros rv d1">Le Laos ne crie pas, il parfume : citronnelle, menthe, riz grillé pilé,
+          piment dosé <em>à la demande.</em></p>
+          <p class="rv d2">À deux pas du canal et de la rue Oberkampf, Luangpra sert la cuisine des bords du Mékong
+          dans une salle verte et boisée. On y mange comme là-bas : le riz gluant se pince à la main,
+          le laab se partage, et la soupe-repas tient lieu de plat principal. Les habitués du quartier
+          ne s'y trompent pas — 4,6/5 sur plus de 300 avis.</p>
+          <div class="rituel rv d3">
+            <div><b>Riz gluant</b><span>servi dans son panier tressé</span></div>
+            <div><b>Fait maison</b><span>jusqu'aux pâtes de curry</span></div>
+            <div><b>Piment au choix</b><span>de doux à « comme à Vientiane »</span></div>
+          </div>
+        </div>
+        <div class="ph rv d1"><img src="assets/salle.jpg" alt="La salle aux objets lao, chaises rouges et bois sombre" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec laabbar" id="laab">
+    <div class="wrap">
+      <div class="shead rv">
+        <span class="lao" aria-hidden="true">ລາບ</span>
+        <h2>Le bar à laab</h2>
+        <p>Le laab, c'est la salade nationale lao : viande ou poisson hachés, citronnelle, herbes, riz grillé pilé.
+        Ici, on le décline en huit — prix de la carte.</p>
+      </div>
+      <div class="laabs">
+        <div class="laab rv"><span class="p">10 €</span><h3>Laab Neua</h3><p>Bœuf poêlé — ou en tartare, pour les puristes.</p></div>
+        <div class="laab rv d1"><span class="p">10 €</span><h3>Laab Kung</h3><p>Crevettes à la citronnelle.</p></div>
+        <div class="laab rv d2"><span class="p">10 €</span><h3>Laab Pla Saumon</h3><p>Tartare laotien de saumon.</p></div>
+        <div class="laab rv d3"><span class="p">10 €</span><h3>Laab Pla Muk</h3><p>Seiches à la citronnelle.</p></div>
+        <div class="laab rv"><span class="p">10 €</span><h3>Laab Ped</h3><p>Canard aux herbes.</p></div>
+        <div class="laab rv d1"><span class="p">12 €</span><h3>Laab Talé</h3><p>Fruits de mer à la citronnelle.</p></div>
+        <div class="laab rv d2"><span class="p">8 €</span><h3>Laab Som O</h3><p>Pamplemousse — la version fraîcheur.</p></div>
+        <div class="laab rv d3"><span class="p">8 €</span><h3>Yam Woon Sen</h3><p>Vermicelles thaï à la citronnelle, l'esprit cousin.</p></div>
+      </div>
+      <p class="laab-note rv">Et pour ouvrir : <b>nem thadeua 8 €</b> — le taboulé lao de riz soufflé au porc acidulé,
+      introuvable ou presque ailleurs à Paris.</p>
+    </div>
+  </section>
+
+  <section class="sec classiques" id="classiques">
+    <div class="wrap">
+      <div class="shead rv"><span class="lao" aria-hidden="true">ອາຫານ</span><h2>Les classiques qui rassurent</h2></div>
+      <div class="cgrid">
+        <figure class="cl cl1 rv" style="margin:0"><img src="assets/padthai.jpg" alt="Pad thaï aux crevettes servi sur plateau de bois" loading="lazy" /><figcaption><b>Pad thaï aux crevettes</b><span>le best-seller, sauce tamarin maison</span></figcaption></figure>
+        <figure class="cl cl2 rv d1" style="margin:0"><img src="assets/table.jpg" alt="La table : curry vert, pad thaï et riz gluant à partager" loading="lazy" /><figcaption><b>La tablée lao</b><span>currys, riz gluant, tout au centre</span></figcaption></figure>
+        <figure class="cl cl3 rv" style="margin:0"><img src="assets/laab.jpg" alt="Salades lao aux herbes fraîches" loading="lazy" /><figcaption><b>Les salades d'herbes</b><span>som tam, laab, fraîcheur</span></figcaption></figure>
+        <figure class="cl cl4 rv d1" style="margin:0"><img src="assets/entrees.jpg" alt="Rouleaux dorés et sauce cacahuète dans leur panier vapeur" loading="lazy" /><figcaption><b>Les entrées dorées</b><span>poh pia, satay, beignets</span></figcaption></figure>
+        <figure class="cl cl5 rv d2" style="margin:0"><img src="assets/interieur.jpg" alt="L'intérieur vert et lumineux du restaurant" loading="lazy" /><figcaption><b>La salle verte</b><span>et sa terrasse aux beaux jours</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="infos" style="padding-top:0">
+    <div class="wrap">
+      <div class="shead rv"><span class="lao" aria-hidden="true">ຂໍ້ມູນ</span><h2>Infos pratiques</h2></div>
+      <div class="infos-grid">
+        <div>
+          <div class="ihor rv">
+            <div class="hr"><b>Lundi — Samedi</b><span class="h">12h–14h30 · 19h–23h30</span></div>
+            <div class="hr dim"><b>Dimanche</b><span class="h">19h–23h30 — le soir seulement</span></div>
+          </div>
+          <div class="icoords rv d1">
+            <span>120 rue Saint-Maur, 75011 Paris</span>
+            <span>Métro Goncourt ou Parmentier</span>
+            <a href="tel:+33143388620">01 43 38 86 20</a>
+            <span>Sur place · à emporter · livraison · réservation TheFork</span>
+          </div>
+        </div>
+        <div class="imap rv d1">
+          <iframe title="Plan d'accès — Luangpra, 120 rue Saint-Maur, Paris 11ᵉ" src="https://www.google.com/maps?q=120+Rue+Saint-Maur,+75011+Paris&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fin">
+    <span class="lao rv" aria-hidden="true">ກິນເຂົ້າ</span>
+    <h2 class="rv d1">Le panier de riz gluant<br />n'attend que vous.</h2>
+    <p class="rv d2">Une table se réserve en un appel — le niveau de piment, lui, se négocie sur place.</p>
+    <a class="btn rv d3" href="tel:+33143388620">01 43 38 86 20</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <span class="fb">Luangpra<span>ຫຼວງພະບາງ</span></span>
+    <span>120 rue Saint-Maur, Paris 11ᵉ · <a href="tel:+33143388620">01 43 38 86 20</a></span>
+    <span>Dimanche : soir uniquement</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pre = document.getElementById('pre');
+  window.addEventListener('load', function(){ setTimeout(function(){ pre.classList.add('done'); }, 850); });
+  setTimeout(function(){ pre.classList.add('done'); }, 2400);
+
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('sc', window.scrollY > 30); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var burger = document.getElementById('burger'), mm = document.getElementById('mm');
+  burger.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){
+    mm.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+  }); });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
